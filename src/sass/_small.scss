@@ -1,0 +1,89 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+	01 TYPOGRAPHY SYSTEM
+
+	SPACING SYSTEM(px)
+	2 / 4/ 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+	FONT SIZE SYSTEM (px)
+	10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+	FONT weigths:
+	Default: 400
+	Medium: 500
+	Semi-bold: 600
+	Bold: 700
+
+	Line heights
+	Default: 1
+	1.05
+	1.6
+
+	02 COLORS
+
+	Primary: #e67e22
+
+	Tints:
+	#fdf2e9;
+	#fae5d3;
+	Shades:
+	#cf711f;
+	Accents: 
+	Greys: 
+	#555
+	#333
+*/
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.6rem;
+	color: $white;
+	background-color: $dark-blue;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 5.6rem;
+	padding: 1.6rem;
+	background-color: $semi-medium-blue;
+	&__logo {
+		width: 2.5rem;
+		height: 2rem;
+	}
+	&__list {
+		display: flex;
+		gap: 2.4rem;
+		list-style: none;
+		&-item {
+			height: 1.6rem;
+			&-icon {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+		}
+		&-item.active {
+			.nav__list-item-icon {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+	&__avatar {
+		width: 2.4rem;
+	}
+}

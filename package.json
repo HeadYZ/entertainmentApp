@@ -1,0 +1,27 @@
+{
+	"name": "forkify",
+	"version": "1.0.0",
+	"description": "Recipe application",
+	"default": "index.html",
+	"targets": {
+		"main": false
+	},
+	"browserslist": "> 0.25%, not dead",
+	"scripts": {
+		"start": "parcel --target default index.html",
+		"build": "parcel build index.html --no-optimize --no-scope-hoist --dist-dir ./dist"
+	},
+	"author": "Patryk Krasowski",
+	"license": "ISC",
+	"dependencies": {
+		"core-js": "^3.29.1",
+		"fractional": "^1.0.0",
+		"lodash-es": "^4.17.21",
+		"regenerator-runtime": "^0.13.11"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.9.3",
+		"parcel": "^2.8.3",
+		"process": "^0.11.10"
+	}
+}

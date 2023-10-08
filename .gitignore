@@ -1,0 +1,8 @@
+node_modules
+.parcel-cache
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+dist
