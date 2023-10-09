@@ -63,8 +63,19 @@ body {
 	padding: 1.6rem;
 	background-color: $semi-medium-blue;
 	&__logo {
-		width: 2.5rem;
-		height: 2rem;
+		&-box {
+			width: 2.5rem;
+			height: 2rem;
+		}
+		&-item {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+		&-img {
+			height: 100%;
+			width: 100%;
+		}
 	}
 	&__list {
 		display: flex;
@@ -74,7 +85,6 @@ body {
 			height: 1.6rem;
 			&-icon {
 				width: 1.6rem;
-				height: 1.6rem;
 			}
 		}
 		&-item.active {
@@ -84,6 +94,9 @@ body {
 		}
 	}
 	&__avatar {
-		width: 2.4rem;
+		height: 2.4rem;
+		&-img {
+			width: 2.4rem;
+		}
 	}
 }

@@ -1,0 +1,41 @@
+@use './colors' as *;
+
+@media (min-width: 90em) {
+	body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		padding: 3.2rem 3.2rem 0;
+	}
+	.nav {
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0;
+		height: calc(100vh - 6.4rem);
+		width: 9.6rem;
+		padding: 2.4rem;
+		border-radius: 1rem;
+		&__logo {
+			&-box {
+				width: 3.2rem;
+				height: 2.56rem;
+			}
+		}
+		&__list {
+			flex-direction: column;
+			gap: 3.2rem;
+			list-style: none;
+			&-item {
+				height: 2rem;
+				&-icon {
+					width: 2rem;
+				}
+			}
+		}
+		&__avatar {
+			height: 3.2rem;
+			&-img {
+				width: 3.2rem;
+			}
+		}
+	}
+}

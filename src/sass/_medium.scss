@@ -1,0 +1,36 @@
+@use './colors' as *;
+
+@media (min-width: 48em) {
+	body {
+		padding: 0 2.5rem;
+	}
+	.nav {
+		margin-top: 2.3rem;
+		height: 7.2rem;
+		padding: 2.4rem;
+		border-radius: 1rem;
+		&__logo {
+			&-box {
+				width: 3.2rem;
+				height: 2.56rem;
+			}
+		}
+		&__list {
+			display: flex;
+			gap: 3.2rem;
+			list-style: none;
+			&-item {
+				height: 2rem;
+				&-icon {
+					width: 2rem;
+				}
+			}
+		}
+		&__avatar {
+			height: 3.2rem;
+			&-img {
+				width: 3.2rem;
+			}
+		}
+	}
+}
