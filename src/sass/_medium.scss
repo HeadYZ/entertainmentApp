@@ -1,7 +1,7 @@
 @use './colors' as *;
 
 @media (min-width: 48em) {
-	body {
+	main {
 		padding: 0 2.5rem;
 	}
 	.nav {
