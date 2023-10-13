@@ -1,4 +1,6 @@
 @use './colors' as *;
+@use './UI/layout' as *;
+@use './mixins/_text.scss' as *;
 
 *,
 *::before,
@@ -54,49 +56,86 @@ body {
 	color: $white;
 	background-color: $dark-blue;
 }
+.main {
+	/////////////////////NAV
+	/// /////////////////////////
+	/// /////////////////////////
 
-.nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 5.6rem;
-	padding: 1.6rem;
-	background-color: $semi-medium-blue;
-	&__logo {
-		&-box {
-			width: 2.5rem;
-			height: 2rem;
-		}
-		&-item {
-			display: block;
-			height: 100%;
-			width: 100%;
-		}
-		&-img {
-			height: 100%;
-			width: 100%;
-		}
-	}
-	&__list {
+	.nav {
 		display: flex;
-		gap: 2.4rem;
-		list-style: none;
-		&-item {
-			height: 1.6rem;
-			&-icon {
-				width: 1.6rem;
+		align-items: center;
+		justify-content: space-between;
+		height: 5.6rem;
+		padding: 1.6rem;
+		background-color: $semi-medium-blue;
+		&__logo {
+			&-box {
+				width: 2.5rem;
+				height: 2rem;
+			}
+			&-item {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+			&-img {
+				height: 100%;
+				width: 100%;
 			}
 		}
-		&-item.active {
-			.nav__list-item-icon {
-				filter: brightness(0) invert(1);
+		&__list {
+			display: flex;
+			gap: 2.4rem;
+			list-style: none;
+			&-item {
+				height: 1.6rem;
+				&-icon {
+					width: 1.6rem;
+				}
+			}
+			&-item.active {
+				.nav__list-item-icon {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+		&__avatar {
+			height: 2.4rem;
+			&-img {
+				width: 2.4rem;
 			}
 		}
 	}
-	&__avatar {
-		height: 2.4rem;
-		&-img {
-			width: 2.4rem;
+
+	////////////////////app 
+	/// ///////////////////////////////////
+	.app {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+		margin-top: 2.4rem;
+
+		////////////////// APP INPUT
+		/// 
+		&__search {
+			display: flex;
+			gap: 1.6rem;
+			&-img {
+				width: 2.4rem;
+			}
+			&-input {
+				width: 21.4rem;
+				background: transparent;
+				border: none;
+				opacity: 49.79%;
+			}
+			&-input::placeholder {
+				
+				font-size: 1.6rem;
+				font-family: 'Outfit', sans-serif;
+				font-weight: 300;
+				color: $white;
+			}
 		}
 	}
 }

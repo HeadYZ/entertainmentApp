@@ -1,0 +1,53 @@
+@mixin body-s {
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+@mixin body-m {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+@mixin heading-xs {
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+@mixin heading-s {
+	font-size: 2.4rem;
+	font-weight: 500;
+}
+
+@mixin heading-m {
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+
+@mixin heading-l {
+	font-size: 3.2rem;
+	font-weight: 300;
+	letter-spacing: -0.5px;
+}
+
+.heading-secondary {
+	font-size: 2rem;
+	font-weight: 300;
+	letter-spacing: -0.31px;
+}
+
+// <section class="trending section-padding--left">
+// <h2 class="heading-secondary">Trending</h2>
+// <div class="trending__box">
+//   <article class="trening__card">
+// 	<div class="trending__card-tags">
+
+// 	</div>
+// 	<h3 class="">Beyond Earth</h3>
+// 	<div><img src="./assets/icon-bookmark-empty.svg" alt="empty bookmark icon"></div>
+//   </article>
+// </div>
+// </section>
+
+// <section class="recommended section-padding">
+// <h2 class="heading-secondary">Recommended for you</h2>
+// </section>

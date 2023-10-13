@@ -1,35 +1,64 @@
 @use './colors' as *;
+@use './mixins/text' as *;
 
 @media (min-width: 48em) {
-	main {
-		padding: 0 2.5rem;
-	}
-	.nav {
-		margin-top: 2.3rem;
-		height: 7.2rem;
-		padding: 2.4rem;
-		border-radius: 1rem;
-		&__logo {
-			&-box {
-				width: 3.2rem;
-				height: 2.56rem;
+	.main {
+		////////////////////////NAV
+		/// ///////////////////////////////
+		/// ////////////////////////
+		.nav {
+			margin: 2.3rem auto 3.3rem;
+			height: 7.2rem;
+			width: calc(100vw - 5rem);
+			padding: 2.4rem;
+			border-radius: 1rem;
+			&__logo {
+				&-box {
+					width: 3.2rem;
+					height: 2.56rem;
+				}
 			}
-		}
-		&__list {
-			display: flex;
-			gap: 3.2rem;
-			list-style: none;
-			&-item {
-				height: 2rem;
-				&-icon {
-					width: 2rem;
+			&__list {
+				display: flex;
+				gap: 3.2rem;
+				list-style: none;
+				&-item {
+					height: 2rem;
+					&-icon {
+						width: 2rem;
+					}
+				}
+			}
+			&__avatar {
+				height: 3.2rem;
+				&-img {
+					width: 3.2rem;
 				}
 			}
 		}
-		&__avatar {
-			height: 3.2rem;
-			&-img {
-				width: 3.2rem;
+		//////////////////// APP
+		/////////////////////
+
+		.app {
+			margin: 0;
+			gap: 3.3rem;
+
+			////////////////// APP INPUT
+
+			&__search {
+				display: flex;
+				gap: 2.4rem;
+				&-img {
+					width: 3.2rem;
+				}
+				&-input {
+					width: 32.1rem;
+				}
+				&-input::placeholder {	position: absolute;
+					top: 0;
+					left: 0;
+					@include heading-m;
+				}
 			}
 		}
 	}
