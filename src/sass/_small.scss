@@ -107,7 +107,7 @@ body {
 		}
 	}
 
-	////////////////////app 
+	////////////////////app
 	/// ///////////////////////////////////
 	.app {
 		display: grid;
@@ -116,7 +116,7 @@ body {
 		margin-top: 2.4rem;
 
 		////////////////// APP INPUT
-		/// 
+		///
 		&__search {
 			display: flex;
 			gap: 1.6rem;
@@ -130,11 +130,79 @@ body {
 				opacity: 49.79%;
 			}
 			&-input::placeholder {
-				
 				font-size: 1.6rem;
 				font-family: 'Outfit', sans-serif;
 				font-weight: 300;
 				color: $white;
+			}
+		}
+	}
+
+	//////////////////////////// SECTION TRENDING
+	/// //////////////////////////////////
+	.trending {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		overflow: hidden;
+		&__box {
+			display: flex;
+			gap: 1.6rem;
+		}
+		&__card {
+			position: relative;
+			min-width: 24rem;
+			height: 14rem;
+			border-radius: 0.8rem;
+			overflow: hidden;
+			// background: linear-gradient(rgba(0, 0, 0, 100%), rgba(0, 0, 0, 0.01%));
+			&-img {
+				position: absolute;
+				width: 100%;
+				z-index: -1;
+			}
+			&-bookmark {
+				position: absolute;
+				top: 0.8rem;
+				left: 20rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 3.2rem;
+				height: 3.2rem;
+				background-color: rgba(16, 20, 30, 0.5);
+				border-radius: 50%;
+				&-icon {
+					width: 1.167rem;
+					height: 1.4rem;
+				}
+			}
+			&-box {
+				position: absolute;
+				bottom: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				width: 100%;
+				height: 7rem;
+				padding: 1.6rem;
+			}
+			&-dot {
+				margin: 0 0.8rem;
+				width: 0.3rem;
+				height: 0.3rem;
+				border-radius: 50%;
+				background-color: $gray;
+			}
+			&-tags {
+				display: flex;
+				align-items: center;
+				font-size: 1.2rem;
+				font-weight: 300;
+				opacity: 75%;
+			}
+			&-title {
+				@include body-m;
 			}
 		}
 	}
