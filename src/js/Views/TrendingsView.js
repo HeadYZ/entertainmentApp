@@ -8,9 +8,10 @@ class TrendingsView extends View {
 	prevContainerScrollLeft
 
 	generateMarkup() {
+		console.log(window.innerWidth)
 		return ` <article class="trending__card" tabindex=0>
         <img src="${
-					window.innerWidth > 768 ? this.data.thumbnail.trending.small : this.data.thumbnail.trending.large
+					window.innerWidth < 768 ? this.data.thumbnail.trending.small : this.data.thumbnail.trending.large
 				}" alt="beyond-earth"
           class="trending__card-img">
         <div class="trending__card-box">
