@@ -11,7 +11,7 @@ class TrendingsView extends View {
 		return ` <article class="trending__card" tabindex=0>
         <img src="${
 					window.innerWidth < 768 ? this.data.thumbnail.trending.small : this.data.thumbnail.trending.large
-				}" alt="beyond-earth"
+				}" alt="${this.data.title}"
           class="trending__card-img">
         <div class="trending__card-box">
           <div class="trending__card-tags">
@@ -19,9 +19,7 @@ class TrendingsView extends View {
             <div class="trending__card-dot"></div>
             <span class="trending__card-category"><img src="${
 							this.data.category === 'Movie' ? './icon-category-movie.svg' : './icon-category-tv.svg'
-						}" alt="category icon"
-                class="trending__card-category-icon">
-              ${this.data.category}</span>
+						}" alt="category icon" class="trending__card-category-icon">${this.data.category}</span>
             <div class="trending__card-dot"></div>
             <span class="trending__card-topic">${this.data.rating}</span>
           </div>
