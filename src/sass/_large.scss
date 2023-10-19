@@ -57,19 +57,21 @@
 			/// //////////////////////////////////
 			.trending {
 				margin-top: 3.4rem;
-				// &__box::-webkit-scrollbar {
-				// 	background-color: #fff;
-				// 	color: black;
-				// 	display: block;
-				// }
-				// &__box::-webkit-scrollbar-thumb {
-				// 	background-color: darkgrey;
-				// 	outline: 1px solid slategrey;
-				// 	width: 10px;
-				// }
-				// &__card {
-				// 	cursor: grab;
-				// }
+				&__card {
+					cursor: grab;
+					&:hover .trending__card,
+					&:focus .trending__card {
+						&-container-btn {
+							opacity: 1;
+						}
+						&-shadow {
+							background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100%) 140%), rgba(0, 0, 0, 50%);
+						}
+					}
+				}
+				&__card:focus {
+					outline: none;
+				}
 				&__card:last-child {
 					margin-right: 3.6rem;
 				}

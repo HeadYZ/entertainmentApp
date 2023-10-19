@@ -8,7 +8,6 @@ class TrendingsView extends View {
 	prevContainerScrollLeft
 
 	generateMarkup() {
-		console.log(window.innerWidth)
 		return ` <article class="trending__card" tabindex=0>
         <img src="${
 					window.innerWidth < 768 ? this.data.thumbnail.trending.small : this.data.thumbnail.trending.large
@@ -30,8 +29,8 @@ class TrendingsView extends View {
         </div>
         <div class="trending__card-bookmark"><img src="./icon-bookmark-empty.svg" alt="empty bookmark icon"
             class="trending__card-bookmark-icon"></div>
-        <div class="trending__card-shadow"></div>
-  
+          <div class="trending__card-container-btn">  <div class="trending__card-btn"><img src='./icon-play.svg' alt='play icon' class="trending__card-btn-icon"/><span class='trending__card-btn-text'>Play</span></div></div>
+          <div class="trending__card-shadow"></div>
       </article>`
 	}
 }
