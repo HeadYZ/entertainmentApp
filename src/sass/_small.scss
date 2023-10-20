@@ -1,7 +1,7 @@
 @use './colors' as *;
 @use './UI/layout' as *;
 @use './mixins/_text.scss' as *;
-
+@use './mixins/_btn.scss' as *;
 *,
 *::before,
 *::after {
@@ -163,42 +163,7 @@ body {
 			height: 14rem;
 			border-radius: 0.8rem;
 			overflow: hidden;
-			&-container-btn {
-				opacity: 0;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 0.9rem 2.4rem 0.9rem 0.9rem;
-				background: rgba(255, 255, 255, 0.25);
-				border-radius: 2.85rem;
-				transition: opacity 0.3s;
-			}
-			&-btn {
-				display: flex;
-				align-items: center;
-				gap: 1.9rem;
-				color: $white;
-				background: none;
-				border: none;
-				cursor: grab;
-				&-text {
-					@include heading-xs;
-					z-index: 1;
-				}
-				&-icon {
-					width: 3rem;
-				}
-			}
-
-			&-shadow {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-				z-index: -1;
-				transition: background 0.3s;
-			}
+			@include card-play-btn;
 			&-img {
 				position: absolute;
 				width: 100%;
@@ -275,17 +240,27 @@ body {
 		&__box {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 1.5rem;
+			gap: 1.6rem 1.5rem;
 		}
 		&__card {
 			position: relative;
 			width: 16.4rem;
+			@include card-play-btn;
+			.card-shadow {
+				opacity: 0;
+			}
 			&-img {
-				width: 100%;
-				border-radius: 0.8rem;
+				position: relative;
+				height: 11rem;
+				&-item {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 0.8rem;
+				}
 			}
 			&-tags {
-				margin: 0.4rem 0;
+				margin: 0.8rem 0 0.4rem 0;
 				display: flex;
 				align-items: center;
 				gap: 0.6rem;
@@ -322,9 +297,11 @@ body {
 				height: 3.2rem;
 				background-color: rgba(16, 20, 30, 0.5);
 				border-radius: 50%;
+				z-index: 10;
 				&-icon {
 					width: 1.167rem;
 					height: 1.4rem;
+					z-index: 11;
 				}
 			}
 		}

@@ -27,8 +27,8 @@ class TrendingsView extends View {
         </div>
         <div class="trending__card-bookmark"><img src="./icon-bookmark-empty.svg" alt="empty bookmark icon"
             class="trending__card-bookmark-icon"></div>
-          <div class="trending__card-container-btn">  <div class="trending__card-btn"><img src='./icon-play.svg' alt='play icon' class="trending__card-btn-icon"/><span class='trending__card-btn-text'>Play</span></div></div>
-          <div class="trending__card-shadow"></div>
+          <div class="card-container-btn">  <div class="card-btn"><img src='./icon-play.svg' alt='play icon' class="card-btn-icon"/><span class='card-btn-text'>Play</span></div></div>
+          <div class="card-shadow"></div>
       </article>`
 	}
 }

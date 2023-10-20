@@ -65,7 +65,7 @@
 		//////////////////////////// SECTION TRENDING
 		/// //////////////////////////////////
 		.trending {
-			gap: 2.5em;
+			gap: 2.5rem;
 			.heading-secondary {
 				@include heading-l;
 			}
@@ -91,7 +91,44 @@
 					@include heading-s;
 				}
 			}
-			
+		}
+
+		//////////////////////////// SECTION RECOMMENDED
+		/// //////////////////////////////////
+
+		.recommended {
+			margin-top: 0.6rem;
+			&__box {
+				gap: 2.4rem 2.9rem;
+			}
+			&__card {
+				width: 22rem;
+				&-img{
+					height: auto;
+				}
+				&-tags {
+					margin: 0.8rem 0 0.5rem 0;
+					gap: 0.8rem;
+					font-size: 1.3rem;
+					&-dot {
+						width: 0.3rem;
+						height: 0.3rem;
+					}
+					&-category {
+						&-icon {
+							margin-right: 0.6rem;
+							width: 1.2rem;
+						}
+					}
+				}
+				&-title {
+					@include heading-xs;
+				}
+				&-bookmark {
+					top: 1.6rem;
+					right: 1.6rem;
+				}
+			}
 		}
 	}
 }

@@ -1,3 +1,5 @@
+@use '../colors' as *;
+
 @mixin body-s {
 	font-size: 1.3rem;
 	font-weight: 300;
@@ -35,3 +37,9 @@
 	letter-spacing: -0.31px;
 }
 
+
+@media (min-width: 48em) {
+	.heading-secondary {
+		@include heading-l;
+	}
+}
