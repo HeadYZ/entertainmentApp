@@ -1,6 +1,7 @@
 import * as model from './model'
 import TrendingsView from './Views/TrendingsView'
 import RecommendedView from './Views/RecommendedView'
+import SearchView from './Views/SearchView'
 
 const trendingsController = () => {
 	const currentTrendings = model.currentTrendings()
@@ -17,12 +18,21 @@ const recommendedController = () => {
 	}
 }
 
+const searchController = () => {
+	const searchPhraseTitles = searchPhrase => {
+		const availableTitles = model.titlesSearch(searchPhrase)
+		for (const searchTerm of availableTitles) {
+			SearchView.render(searchTerm)
+		}
+	}
+
+	SearchView.searchEventHandler(searchPhraseTitles)
+}
+
 const init = () => {
 	trendingsController()
 	recommendedController()
+	searchController()
 }
 
 init()
-
-const box = document.querySelector('.app__sections-box')
-
