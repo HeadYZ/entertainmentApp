@@ -23,71 +23,41 @@
       <span class="nav__logo-box"><a class="nav__logo-item" href="#"><img src="./static/logo.svg" alt="logo"
             class="nav__logo-img"></a></span>
       <ul class="nav__list">
-        <li class="nav__list-item active"><img src="./static/icon-nav-home.svg" alt="icon showing home page"
-            class="nav__list-item-icon"></li>
-        <li class="nav__list-item"><img src="./static/icon-nav-movies.svg" alt="icon showing movie categories"
-            class="nav__list-item-icon"></li>
-        <li class="nav__list-item"><img src="./static/icon-nav-tv-series.svg" alt="icon showing TV series categories"
-            class="nav__list-item-icon">
+        <li class="nav__list-item active"><a href="#"><img src="./static/icon-nav-home.svg" alt="icon showing home page"
+              class="nav__list-item-icon"></a></li>
+        <li class="nav__list-item"><a href="#"><img src="./static/icon-nav-movies.svg"
+              alt="icon showing movie categories" class="nav__list-item-icon"></a></li>
+        <li class="nav__list-item"><a href="#"><img src="./static/icon-nav-tv-series.svg"
+              alt="icon showing TV series categories" class="nav__list-item-icon"></a>
         </li>
-        <li class="nav__list-item"><img src="./static/icon-nav-bookmark.svg" alt="icon showing bookmark categories"
-            class="nav__list-item-icon"></li>
+        <li class="nav__list-item"><a href="#"><img src="./static/icon-nav-bookmark.svg"
+              alt="icon showing bookmark categories" class="nav__list-item-icon"></a></li>
       </ul>
-      <div class="nav__avatar"><img src="./static/image-avatar.png" alt="avatar" class="nav__avatar-img"></div>
+      <div class="nav__avatar"><a href="#"><img src="./static/image-avatar.png" alt="avatar"
+            class="nav__avatar-img"></a></div>
     </nav>
 
     <article class="app">
       <div class="app__search section-padding">
         <img src="./static/icon-search.svg" alt="search icon" class="app__search-img">
-        <input type="text" placeholder="Search for movies or TV series" class="app__search-input">
+        <input type="search" placeholder="Search for movies or TV series" class="app__search-input">
+        <div class="app__search-underline"></div>
       </div>
 
 
-      <section class="trending section-padding--left">
-        <h2 class="heading-secondary">Trending</h2>
-        <div class="trending__box">
-          <!-- <article class="trending__card">
-        
-            <img src="./assets/thumbnails/beyond-earth/trending/small.jpg" alt="beyond-earth"
-              class="trending__card-img">
-            <div class="trending__card-box">
-              <div class="trending__card-tags">
-                <span class="trending__card-year">2019</span>
-                <div class="trending__card-dot"></div>
-                <span class="trending__card-category"><img src="./assets/icon-category-tv.svg" alt="category icon"
-                    class="trending__card-category-icon">
-                  Movie</span>
-                <div class="trending__card-dot"></div>
-                <span class="trending__card-topic">PG</span>
-              </div>
-              <h3 class="trending__card-title">Beyond Earth</h3>
-            </div>
-            <div class="trending__card-bookmark"><img src="./assets/icon-bookmark-empty.svg" alt="empty bookmark icon"
-                class="trending__card-bookmark-icon"></div>
-            <div class="trending__card-shadow"></div>
-          </article> -->
-        </div>
-      </section>
-      
-      <section class="recommended section-padding">
-        <h2 class="heading-secondary">Recommended for you</h2>
-        <div class="recommended__box">
-          <!-- <article class="recommended__card">
-            <img src="" alt="" class="recommended__card-img">
-            <div class="recommended__card-tags">
-              <span class="recommended__card-tags-year"></span>
-              <div class="recommended__card-tags-dot"></div>
-              <span class="recommended__card-tags-category"></span>
-              <div class="recommended__card-tags-dot"></div>
-              <span class="recommended__card-tags-topic"></span>
-            </div>
-            <h3 class="recommended__card-title"></h3>
-            <div class="recommended__card-bookmark"><img src="./assets/icon-bookmark-empty.svg"
-                alt="empty bookmark icon" class="recommended__card-bookmark-icon" </div>
-              <h3></h3>
-          </article> -->
-        </div>
-      </section>
+      <div class="app__sections-box">
+        <section class="trending section-padding--left">
+          <h2 class="heading-secondary">Trending</h2>
+          <div class="trending__box">
+          </div>
+        </section>
+
+        <section class="recommended section-padding">
+          <h2 class="heading-secondary">Recommended for you</h2>
+          <div class="recommended__box">
+          </div>
+        </section>
+      </div>
 
     </article>
 

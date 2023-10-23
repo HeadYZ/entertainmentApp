@@ -1,6 +1,7 @@
 import View from './View'
 class RecommendedView extends View {
 	parentEl = document.querySelector('.recommended__box')
+
 	generateMarkup() {
 		return `
         <article class="recommended__card" tabindex=0>
@@ -23,7 +24,9 @@ class RecommendedView extends View {
           <span class="recommended__card-tags-topic">${this.data.rating}</span>
         </div>
         <h3 class="recommended__card-title">${this.data.title}</h3>
-        <div class="recommended__card-bookmark"><img src="./icon-bookmark-empty.svg" alt="empty bookmark icon"
+        <div class="recommended__card-bookmark"><img src=${
+					this.data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
+				} alt="bookmark icon"
         class="recommended__card-bookmark-icon"></div>
     
       </article>

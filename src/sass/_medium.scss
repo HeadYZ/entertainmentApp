@@ -46,7 +46,6 @@
 			////////////////// APP INPUT
 
 			&__search {
-				display: flex;
 				gap: 2.4rem;
 				&-img {
 					width: 3.2rem;
@@ -60,73 +59,77 @@
 					left: 0;
 					@include heading-m;
 				}
-			}
-		}
-		//////////////////////////// SECTION TRENDING
-		/// //////////////////////////////////
-		.trending {
-			gap: 2.5rem;
-			.heading-secondary {
-				@include heading-l;
-			}
-			&__box {
-				gap: 4rem;
-			}
-			&__card {
-				min-width: 47rem;
-				height: 23rem;
-				&-bookmark {
-					top: 1.6rem;
+				&-underline {
 					right: 2.4rem;
-				}
-				&-box {
-					gap: 0.3rem;
-					height: 10rem;
-					padding-left: 2.4rem;
-				}
-				&-tags {
-					@include body-m;
-				}
-				&-title {
-					@include heading-s;
+					width: calc(100% - 10.6rem);
 				}
 			}
-		}
-
-		//////////////////////////// SECTION RECOMMENDED
-		/// //////////////////////////////////
-
-		.recommended {
-			margin-top: 0.6rem;
-			&__box {
-				gap: 2.4rem 2.9rem;
-			}
-			&__card {
-				width: 22rem;
-				&-img{
-					height: auto;
+			//////////////////////////// SECTION TRENDING
+			/// //////////////////////////////////
+			.trending {
+				gap: 2.5rem;
+				.heading-secondary {
+					@include heading-l;
 				}
-				&-tags {
-					margin: 0.8rem 0 0.5rem 0;
-					gap: 0.8rem;
-					font-size: 1.3rem;
-					&-dot {
-						width: 0.3rem;
-						height: 0.3rem;
+				&__box {
+					gap: 4rem;
+				}
+				&__card {
+					min-width: 47rem;
+					height: 23rem;
+					&-bookmark {
+						top: 1.6rem;
+						right: 2.4rem;
 					}
-					&-category {
-						&-icon {
-							margin-right: 0.6rem;
-							width: 1.2rem;
+					&-box {
+						gap: 0.3rem;
+						height: 10rem;
+						padding-left: 2.4rem;
+					}
+					&-tags {
+						@include body-m;
+					}
+					&-title {
+						@include heading-s;
+					}
+				}
+			}
+
+			//////////////////////////// SECTION RECOMMENDED
+			/// //////////////////////////////////
+
+			.recommended {
+				margin-top: 0.6rem;
+				&__box {
+					gap: 2.4rem 2.9rem;
+				}
+				&__card {
+					width: 22rem;
+					&-img {
+						height: auto;
+					}
+					&-tags {
+						margin: 0.8rem 0 0.5rem 0;
+						gap: 0.8rem;
+						font-size: 1.3rem;
+						&-dot {
+							width: 0.3rem;
+							height: 0.3rem;
+						}
+						&-category {
+							&-icon {
+								margin-right: 0.6rem;
+								width: 1.2rem;
+							}
 						}
 					}
-				}
-				&-title {
-					@include heading-xs;
-				}
-				&-bookmark {
-					top: 1.6rem;
-					right: 1.6rem;
+					&-title {
+						@include heading-xs;
+					}
+					&-bookmark {
+						top: 1.6rem;
+						right: 1.6rem;
+					}
 				}
 			}
 		}

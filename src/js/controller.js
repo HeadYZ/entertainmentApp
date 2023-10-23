@@ -23,3 +23,6 @@ const init = () => {
 }
 
 init()
+
+const box = document.querySelector('.app__sections-box')
+
