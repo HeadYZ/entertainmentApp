@@ -21,6 +21,9 @@ const recommendedController = () => {
 const searchController = () => {
 	const searchPhraseTitles = searchPhrase => {
 		const availableTitles = model.titlesSearch(searchPhrase)
+		const numberOfTitles = availableTitles.length
+		SearchView.showSearchInfo(numberOfTitles, searchPhrase)
+
 		for (const searchTerm of availableTitles) {
 			SearchView.render(searchTerm)
 		}

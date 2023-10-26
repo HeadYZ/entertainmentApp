@@ -1,0 +1,169 @@
+@use './colors' as *;
+@use './mixins/text' as *;
+@use './mixins/btn' as *;
+
+.card__shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+	z-index: -1;
+	transition: background 0.3s, opacity 0.3s;
+}
+
+.card {
+	position: relative;
+	
+	min-width: 16.4rem;
+	@include card-play-btn;
+	&__shadow {
+		opacity: 0;
+	}
+	&__container-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0.9rem 2.4rem 0.9rem 0.9rem;
+		background: rgba(255, 255, 255, 0.25);
+		border-radius: 2.85rem;
+		opacity: 0;
+		z-index: 2;
+		transition: opacity 0.3s;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: 1.9rem;
+		color: $white;
+		background: none;
+		border: none;
+		&-text {
+			cursor: default;
+			@include heading-xs;
+			z-index: 1;
+		}
+		&-icon {
+			width: 3rem;
+		}
+	}
+	&__img {
+		position: relative;
+		height: 11rem;
+		&-item {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.8rem;
+		}
+	}
+	&__tags {
+		margin: 0.8rem 0 0.4rem 0;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-size: 1.1rem;
+		opacity: 75%;
+		font-weight: 300;
+		&-dot {
+			width: 0.2rem;
+			height: 0.2rem;
+			border-radius: 50%;
+			background-color: rgba($color: $white, $alpha: 0.5);
+		}
+		&-category {
+			display: flex;
+			align-items: center;
+			&-icon {
+				margin-right: 0.4rem;
+				width: 1rem;
+			}
+		}
+	}
+	&__title {
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+	&__bookmark {
+		position: absolute;
+		top: 0.8rem;
+		right: 0.8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 3.2rem;
+		height: 3.2rem;
+		background-color: rgba(16, 20, 30, 0.5);
+		border-radius: 50%;
+		z-index: 10;
+		&-icon {
+			width: 1.167rem;
+			height: 1.4rem;
+			z-index: 11;
+		}
+	}
+}
+
+@media (min-width: 48em) {
+	.card {
+		min-width: 22rem;
+		&__img {
+			height: 14rem;
+		}
+		&__tags {
+			margin: 0.8rem 0 0.5rem 0;
+			gap: 0.8rem;
+			font-size: 1.3rem;
+			&-dot {
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			&-category {
+				&-icon {
+					margin-right: 0.6rem;
+					width: 1.2rem;
+				}
+			}
+		}
+		&__title {
+			@include heading-xs;
+		}
+		&__bookmark {
+			top: 1.6rem;
+			right: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 90em) {
+	.card {
+		min-width: 28rem;
+		cursor: grab;
+		&:hover,
+		&:focus {
+			@include card-play-btn-hover;
+			.card__shadow {
+				background: none;
+				background-color: rgba(0, 0, 0, 20%);
+				z-index: 0;
+				opacity: 1;
+			}
+		}
+		&__img {
+			height: 17.4rem;
+		}
+		&__bookmark {
+			&:hover {
+				background-color: $white;
+				.card__bookmark-icon {
+					filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(100%);
+				}
+			}
+		}
+	}
+	.card:focus {
+		outline: none;
+	}
+}

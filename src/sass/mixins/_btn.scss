@@ -3,7 +3,7 @@
 
 @mixin card-play-btn {
 	.card {
-		&-container-btn {
+		&__container-btn {
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -15,7 +15,7 @@
 			z-index: 2;
 			transition: opacity 0.3s;
 		}
-		&-btn {
+		&__btn {
 			display: flex;
 			align-items: center;
 			gap: 1.9rem;
@@ -36,10 +36,10 @@
 
 @mixin card-play-btn-hover {
 	.card {
-		&-container-btn {
+		&__container-btn {
 			opacity: 1;
 		}
-		&-btn-text {
+		&__btn-text {
 			cursor: grab;
 		}
 	}

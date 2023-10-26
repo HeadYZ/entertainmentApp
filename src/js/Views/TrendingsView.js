@@ -29,8 +29,8 @@ class TrendingsView extends View {
 					this.data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
 				} alt="empty bookmark icon"
             class="trending__card-bookmark-icon"></div>
-          <div class="card-container-btn">  <div class="card-btn"><img src='./icon-play.svg' alt='play icon' class="card-btn-icon"/><span class='card-btn-text'>Play</span></div></div>
-          <div class="card-shadow"></div>
+          <div class="card__container-btn">  <div class="card__btn"><img src='./icon-play.svg' alt='play icon' class="card__btn-icon"/><span class='card__btn-text'>Play</span></div></div>
+          <div class="card__shadow"></div>
       </article>`
 	}
 }

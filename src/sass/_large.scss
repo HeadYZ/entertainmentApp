@@ -67,8 +67,9 @@
 					&:hover,
 					&:focus {
 						@include card-play-btn-hover;
-						.card-shadow {
+						.card__shadow {
 							background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100%) 140%), rgba(0, 0, 0, 50%);
+							opacity: 1;
 						}
 					}
 				}
@@ -88,33 +89,13 @@
 				&__box {
 					gap: 3.2rem 4rem;
 				}
-				&__card {
-					width: 28rem;
-					cursor: grab;
-					&:hover,
-					&:focus {
-						@include card-play-btn-hover;
-						.card-shadow {
-							background: none;
-							background-color: rgba(0, 0, 0, 20%);
-							z-index: 0;
-							opacity: 1;
-						}
-					}
-					&-img {
-						height: 17.4rem;
-					}
-					&-bookmark {
-						&:hover {
-							background-color: $white;
-							.recommended__card-bookmark-icon {
-								filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(100%);
-							}
-						}
-					}
-				}
-				&__card:focus {
-					outline: none;
+			}
+
+			.search {
+				gap: 3.2rem;
+				margin-top: 3.4rem;
+				&__box {
+					gap: 3.2rem 4rem;
 				}
 			}
 		}
