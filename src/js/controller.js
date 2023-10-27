@@ -13,9 +13,8 @@ const trendingsController = () => {
 
 const recommendedController = () => {
 	const currentRecommended = model.remommendedTitles()
-	for (const recommendedTitle of currentRecommended) {
-		RecommendedView.render(recommendedTitle)
-	}
+
+	RecommendedView.render(currentRecommended)
 }
 
 const searchController = () => {

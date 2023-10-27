@@ -1,6 +1,6 @@
 import View from './View'
-class RecommendedView extends View {
-	parentEl = document.querySelector('.recommended__box')
+class TvSeriesView extends View {
+	parentEl = document.querySelector('.tv-series__box')
 
 	generateMarkup() {
 		return this.data
@@ -38,4 +38,4 @@ class RecommendedView extends View {
 	}
 }
 
-export default new RecommendedView()
+export default new TvSeriesView()

@@ -1,7 +1,7 @@
 class View {
 	render(data) {
 		this.data = data
-		const markup = this.generateMarkup(this.data)
+		const markup = this.generateMarkup()
 		this.parentEl.insertAdjacentHTML('beforeend', markup)
 	}
 

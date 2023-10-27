@@ -1,16 +1,26 @@
 import data from '../../data.json'
 
+const DUMMY_DATA = JSON.parse(JSON.stringify(data))
+
 export const currentTrendings = () => {
-	return data.filter(data => data.isTrending === true)
+	return DUMMY_DATA.filter(data => data.isTrending === true)
 }
 
 export const remommendedTitles = () => {
-	return data.filter(data => data.isTrending === false)
+	return DUMMY_DATA.filter(data => data.isTrending === false)
 }
 
 export const titlesSearch = searchPhrase => {
-	return data.filter(data => {
+	return DUMMY_DATA.filter(data => {
 		const smallTitle = data.title.toLowerCase()
 		return smallTitle.includes(searchPhrase.trim().toLowerCase())
 	})
+}
+
+export const moviesTitles = () => {
+	return DUMMY_DATA.filter(data => data.category === 'Movie')
+}
+
+export const tvSeriesTitles = () => {
+	return DUMMY_DATA.filter(data => data.category === 'TV Series')
 }

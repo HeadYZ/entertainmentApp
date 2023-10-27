@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Entertainment web app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
+  <title>Tv Series</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/sass/main.scss">
+  <script defer type="module" src="./src/js/tvSeriesController.js"></script>
 </head>
+
 <body>
 
-  Search for TV series
-  
-  TV Series
 
-  <!-- Display all TV series -->
-  
+  <main class="main">
+
+    <nav class="nav">
+      <span class="nav__logo-box"><a class="nav__logo-item" href="#"><img src="./static/logo.svg" alt="logo"
+            class="nav__logo-img"></a></span>
+      <ul class="nav__list">
+        <li class="nav__list-item"><a href="./index.html"><img src="./static/icon-nav-home.svg"
+              alt="icon showing home page" class="nav__list-item-icon"></a></li>
+        <li class="nav__list-item"><a href="./movies.html"><img src="./static/icon-nav-movies.svg"
+              alt="icon showing movie categories" class="nav__list-item-icon"></a></li>
+        <li class="nav__list-item active"><a href="#"><img src="./static/icon-nav-tv-series.svg"
+              alt="icon showing TV series categories" class="nav__list-item-icon"></a>
+        </li>
+        <li class="nav__list-item"><a href="#"><img src="./static/icon-nav-bookmark.svg"
+              alt="icon showing bookmark categories" class="nav__list-item-icon"></a></li>
+      </ul>
+      <div class="nav__avatar"><a href="#"><img src="./static/image-avatar.png" alt="avatar"
+            class="nav__avatar-img"></a></div>
+    </nav>
+
+    <article class="app">
+      <div class="app__search section-padding">
+        <img src="./static/icon-search.svg" alt="search icon" class="app__search-img">
+        <input type="search" placeholder="Search for movies or TV series" class="app__search-input">
+        <div class="app__search-underline"></div>
+      </div>
+
+      <section class="tv-series section-padding">
+        <h2 class="heading-secondary">TV Series</h2>
+        <div class="tv-series__box"></div>
+      </section>
+    </article>
+
+  </main>
+
 </body>
+
 </html>

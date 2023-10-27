@@ -256,7 +256,9 @@ body {
 		//////////////////////////// SECTION RECOMMENDED
 		/// //////////////////////////////////
 
-		.recommended {
+		.recommended,
+		.movies,
+		.tv-series {
 			display: flex;
 			flex-direction: column;
 			gap: 2.4rem;

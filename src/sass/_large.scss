@@ -83,7 +83,9 @@
 			//////////////////////////// SECTION RECOMMENDED
 			/// //////////////////////////////////
 
-			.recommended {
+			.recommended,
+			.movies,
+			.tv-series {
 				margin-top: 4rem;
 				gap: 3.2rem;
 				&__box {
