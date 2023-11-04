@@ -5,16 +5,14 @@ import SearchView from './Views/SearchView'
 
 const trendingsController = () => {
 	const currentTrendings = model.currentTrendings()
-	for (const trendingTitle of currentTrendings) {
-		TrendingsView.render(trendingTitle)
-	}
+	TrendingsView.render(currentTrendings)
 	TrendingsView.draggableSlider()
 }
 
 const recommendedController = () => {
-	const currentRecommended = model.remommendedTitles()
+	const currentRecommended = model.recommendedTitles()
 
-	RecommendedView.render(currentRecommended)
+	RecommendedView.render(currentRecommended, true)
 }
 
 const searchController = () => {
@@ -33,9 +31,9 @@ const searchController = () => {
 
 const init = async () => {
 	await model.fetchEntertainmentData()
-	// await trendingsController()
-	// await recommendedController()
-	// await searchController()
+	trendingsController()
+	recommendedController()
+	searchController()
 }
 
 init()

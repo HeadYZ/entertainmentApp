@@ -99,7 +99,8 @@
 			/// //////////////////////////////////
 
 			.recommended,
-			.movies,.tv-series {
+			.movies,.tv-series,
+			.bookmarked {
 				margin-top: 0.6rem;
 				&__box {
 					gap: 2.4rem 2.9rem;

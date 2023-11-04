@@ -29,6 +29,16 @@
 				flex-direction: column;
 				gap: 4rem;
 				margin-bottom: auto;
+				&-item {
+					&-icon {
+						transition: filter 0.3s;
+					}
+				}
+				&-item:hover {
+					.nav__list-item-icon {
+						filter: brightness(0) invert(1);
+					}
+				}
 			}
 			&__avatar {
 				height: 4rem;
@@ -64,6 +74,14 @@
 				margin-top: 3.4rem;
 				&__card {
 					cursor: grab;
+					&-bookmark {
+						&:hover {
+							background-color: $white;
+							.trending__card-bookmark-icon {
+								filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(100%);
+							}
+						}
+					}
 					&:hover,
 					&:focus {
 						@include card-play-btn-hover;
@@ -85,7 +103,8 @@
 
 			.recommended,
 			.movies,
-			.tv-series {
+			.tv-series,
+			.bookmarked {
 				margin-top: 4rem;
 				gap: 3.2rem;
 				&__box {

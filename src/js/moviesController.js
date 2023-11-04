@@ -2,10 +2,13 @@ import * as model from './model'
 import MoviesView from './Views/MoviesView'
 
 const moviesController = () => {
-	MoviesView.render(model.moviesTitles())
+	MoviesView.render(model.moviesTitles(),true)
 }
 
-const init = () => {
+const init = async () => {
+	MoviesView.renderSpinner()
+	await model.fetchEntertainmentData()
+	MoviesView.clearSpinner()
 	moviesController()
 }
 

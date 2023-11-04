@@ -3,6 +3,7 @@
 @use './mixins/_text.scss' as *;
 @use './card' as *;
 @use './mixins/_btn.scss' as *;
+@use './UI/spinner' as *;
 *,
 *::before,
 *::after {
@@ -258,7 +259,8 @@ body {
 
 		.recommended,
 		.movies,
-		.tv-series {
+		.tv-series,
+		.bookmarked {
 			display: flex;
 			flex-direction: column;
 			gap: 2.4rem;

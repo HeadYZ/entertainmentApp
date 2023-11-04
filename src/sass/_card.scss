@@ -109,6 +109,7 @@
 @media (min-width: 48em) {
 	.card {
 		min-width: 22rem;
+		flex: 0;
 		&__img {
 			height: 14rem;
 		}
