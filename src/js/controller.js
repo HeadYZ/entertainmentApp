@@ -31,10 +31,11 @@ const searchController = () => {
 	SearchView.searchEventHandler(searchPhraseTitles)
 }
 
-const init = () => {
-	trendingsController()
-	recommendedController()
-	searchController()
+const init = async () => {
+	await model.fetchEntertainmentData()
+	// await trendingsController()
+	// await recommendedController()
+	// await searchController()
 }
 
 init()

@@ -15,7 +15,7 @@
 
 .card {
 	position: relative;
-	
+	flex: 1;
 	min-width: 16.4rem;
 	@include card-play-btn;
 	&__shadow {
