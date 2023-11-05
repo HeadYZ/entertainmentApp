@@ -3,6 +3,7 @@
 @use './mixins/_text.scss' as *;
 @use './card' as *;
 @use './mixins/_btn.scss' as *;
+@use './mixins/_section.scss' as *;
 @use './UI/spinner' as *;
 *,
 *::before,
@@ -93,6 +94,7 @@ body {
 				height: 1.6rem;
 				&-icon {
 					width: 1.6rem;
+				
 				}
 			}
 			&-item.active {
@@ -257,19 +259,6 @@ body {
 		//////////////////////////// SECTION RECOMMENDED
 		/// //////////////////////////////////
 
-		.recommended,
-		.movies,
-		.tv-series,
-		.bookmarked {
-			display: flex;
-			flex-direction: column;
-			gap: 2.4rem;
-			&__box {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 1.6rem 1.5rem;
-			}
-		}
 
 		.search {
 			display: none;

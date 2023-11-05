@@ -66,11 +66,11 @@ class BookmarkedView extends View {
 	}
 	generateMarkup() {
 		return ` <h2 class="heading-secondary">Bookmarked Movies</h2>
-        <div class="bookmarked__movies-box">
+        <div class="bookmarked__movies-box section__cards-box"">
         ${this.generateMoviesMarkup()}
         </div>
         <h2 class="heading-secondary">Bookmarked TV Series</h2>
-        <div class="bookmarked__tvseries-box">
+        <div class="bookmarked__tvseries-box section__cards-box"">
         ${this.generateTVSeriesMarkup()}
         </div>`
 

@@ -9,7 +9,18 @@
 	padding-left: 1.6rem;
 }
 
-/////// styles on
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+
+.section__cards-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.6rem 1.5rem;
+}
+
 
 @media (min-width: 48em) {
 	.section-padding {
@@ -18,6 +29,12 @@
 
 	.section-padding--left {
 		padding-left: 0 2.5rem;
+	}
+	.section {
+		margin-top: 0.6rem;
+	}
+	.section__cards-box {
+		gap: 2.4rem 2.9rem;
 	}
 }
 
@@ -29,5 +46,12 @@
 
 	.section-padding--left {
 		padding-left: 0;
+	}
+	.section {
+		margin-top: 4rem;
+		gap: 3.2rem;
+	}
+	.section__cards-box {
+		gap: 3.2rem 4rem;
 	}
 }

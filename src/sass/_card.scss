@@ -15,12 +15,8 @@
 
 .card {
 	position: relative;
-	flex: 1;
 	min-width: 16.4rem;
 	@include card-play-btn;
-	&__shadow {
-		opacity: 0;
-	}
 	&__container-btn {
 		position: absolute;
 		top: 50%;
@@ -109,7 +105,6 @@
 @media (min-width: 48em) {
 	.card {
 		min-width: 22rem;
-		flex: 0;
 		&__img {
 			height: 14rem;
 		}

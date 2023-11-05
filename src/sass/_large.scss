@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './mixins/text' as *;
 @use './mixins/_btn.scss' as *;
+@use './mixins/_section.scss' as *;
 
 @media (min-width: 90em) {
 	.main {
@@ -29,14 +30,10 @@
 				flex-direction: column;
 				gap: 4rem;
 				margin-bottom: auto;
-				&-item {
-					&-icon {
-						transition: filter 0.3s;
-					}
-				}
+
 				&-item:hover {
 					.nav__list-item-icon {
-						filter: brightness(0) invert(1);
+						filter: invert(66%) sepia(59%) saturate(7204%) hue-rotate(331deg) brightness(95%) contrast(109%);
 					}
 				}
 			}
@@ -100,17 +97,6 @@
 			}
 			//////////////////////////// SECTION RECOMMENDED
 			/// //////////////////////////////////
-
-			.recommended,
-			.movies,
-			.tv-series,
-			.bookmarked {
-				margin-top: 4rem;
-				gap: 3.2rem;
-				&__box {
-					gap: 3.2rem 4rem;
-				}
-			}
 
 			.search {
 				gap: 3.2rem;

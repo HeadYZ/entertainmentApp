@@ -1,5 +1,6 @@
 @use './colors' as *;
 @use './mixins/text' as *;
+@use './mixins/_section.scss' as *;
 
 @media (min-width: 48em) {
 	.main {
@@ -98,14 +99,6 @@
 			//////////////////////////// SECTION RECOMMENDED
 			/// //////////////////////////////////
 
-			.recommended,
-			.movies,.tv-series,
-			.bookmarked {
-				margin-top: 0.6rem;
-				&__box {
-					gap: 2.4rem 2.9rem;
-				}
-			}
 			.search {
 				&__box {
 					gap: 2.4rem 2.9rem;

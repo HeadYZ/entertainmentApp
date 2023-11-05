@@ -10,7 +10,7 @@ class TrendingsView extends View {
 	generateMarkup() {
 		return this.data
 			.map(
-				data => ` <article class="trending__card" tabindex=0 id=${data.title + Math.random()}>
+				data => ` <article class="trending__card" tabindex=0 id='${data.title + Math.random()}'>
     <img src="${window.innerWidth < 768 ? data.thumbnail.trending.small : data.thumbnail.trending.large}" alt="${
 					data.title
 				}"
