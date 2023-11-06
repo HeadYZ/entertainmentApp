@@ -10,7 +10,7 @@ class TrendingsView extends View {
 	generateMarkup() {
 		return this.data
 			.map(
-				data => ` <article class="trending__card" tabindex=0 id='${data.title + Math.random()}'>
+				data => ` <article class="trending__card" tabindex=0 id='${data.id}'>
     <img src="${window.innerWidth < 768 ? data.thumbnail.trending.small : data.thumbnail.trending.large}" alt="${
 					data.title
 				}"
@@ -27,10 +27,10 @@ class TrendingsView extends View {
       </div>
       <h3 class="trending__card-title">${data.title}</h3>
     </div>
-    <div class="trending__card-bookmark"><img src=${
+    <div class="trending__card-bookmark" tabindex=0><img src=${
 			data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
 		} alt="empty bookmark icon"
-        class="trending__card-bookmark-icon"></div>
+        class="trending__card-bookmark-icon" ></div>
       <div class="card__container-btn">  <div class="card__btn"><img src='./icon-play.svg' alt='play icon' class="card__btn-icon"/><span class='card__btn-text'>Play</span></div></div>
       <div class="card__shadow"></div>
   </article>`

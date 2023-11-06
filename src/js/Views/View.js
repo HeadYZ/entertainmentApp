@@ -42,7 +42,7 @@ class View {
 		return this.data
 			.map(title => {
 				return `
-    <article class="card" tabindex=0>
+    <article class="card" tabindex=0 id='${title.id}'>
    <div class='card__img'>
    <img src="${
 			(window.innerWidth < 768 && title.thumbnail.regular.small) ||
@@ -62,7 +62,7 @@ class View {
       <span class="card__tags-topic">${title.rating}</span>
     </div>
     <h3 class="card__title">${title.title}</h3>
-    <div class="card__bookmark"><img src=${
+    <div class="card__bookmark" tabindex=0><img src=${
 			title.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
 		} alt="bookmark icon"
     class="card__bookmark-icon"></div>

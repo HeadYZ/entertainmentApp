@@ -34,34 +34,38 @@ class SearchView extends View {
 			: (this.searchInformation.innerHTML = `Found ${numOfTitles} results for '${searchPhrase}'`)
 	}
 	generateMarkup() {
-		return `
-        <article class="card" tabindex=0>
+		return this.data
+			.map(
+				data => `
+        <article class="card" tabindex=0 id=${data.id}>
        <div class='card__img'>
        <img src="${
-					(window.innerWidth < 768 && this.data.thumbnail.regular.small) ||
-					(window.innerWidth >= 768 && window.innerWidth <= 1200 && this.data.thumbnail.regular.medium) ||
-					(window.innerWidth > 1200 && this.data.thumbnail.regular.large)
-				}" alt="${this.data.title}" class="card__img-item">
+					(window.innerWidth < 768 && data.thumbnail.regular.small) ||
+					(window.innerWidth >= 768 && window.innerWidth <= 1200 && data.thumbnail.regular.medium) ||
+					(window.innerWidth > 1200 && data.thumbnail.regular.large)
+				}" alt="${data.title}" class="card__img-item">
       <div class="card__container-btn">  <div class="card__btn"><img src='./icon-play.svg' alt='play icon' class="card__btn-icon"/><span class='card__btn-text'>Play</span></div></div>
       <div class='card__shadow'></div>
       </div>
         <div class="card__tags">
-          <span class="card__tags-year">${this.data.year}</span>
+          <span class="card__tags-year">${data.year}</span>
           <div class="card__tags-dot"></div>
           <span class="card__tags-category"><img src="${
-						this.data.category === 'Movie' ? './icon-category-movie.svg' : './icon-category-tv.svg'
-					}" alt="category icon" class="card__tags-category-icon">${this.data.category}</span>
+						data.category === 'Movie' ? './icon-category-movie.svg' : './icon-category-tv.svg'
+					}" alt="category icon" class="card__tags-category-icon">${data.category}</span>
           <div class="card__tags-dot"></div>
-          <span class="card__tags-topic">${this.data.rating}</span>
+          <span class="card__tags-topic">${data.rating}</span>
         </div>
-        <h3 class="card__title">${this.data.title}</h3>
+        <h3 class="card__title">${data.title}</h3>
         <div class="card__bookmark"><img src=${
-					this.data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
+					data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
 				} alt="bookmark icon"
         class="card__bookmark-icon"></div>
     
       </article>
         `
+			)
+			.join('')
 	}
 }
 

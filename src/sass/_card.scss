@@ -1,6 +1,5 @@
 @use './colors' as *;
 @use './mixins/text' as *;
-@use './mixins/btn' as *;
 
 .card__shadow {
 	position: absolute;
@@ -16,7 +15,6 @@
 .card {
 	position: relative;
 	min-width: 16.4rem;
-	@include card-play-btn;
 	&__container-btn {
 		position: absolute;
 		top: 50%;
@@ -136,23 +134,37 @@
 @media (min-width: 90em) {
 	.card {
 		min-width: 28rem;
-		cursor: grab;
+		cursor: pointer;
 		&:hover,
 		&:focus {
-			@include card-play-btn-hover;
+			.card__container-btn {
+				opacity: 1;
+			}
+			.card__btn-text {
+				cursor: pointer;
+			}
 			.card__shadow {
 				background: none;
-				background-color: rgba(0, 0, 0, 20%);
+				background-color: rgba(0, 0, 0, 30%);
 				z-index: 0;
 				opacity: 1;
 			}
+		}
+		&__container-btn {
+			transition: background 0.3s;
+		}
+		&__container-btn:hover {
+			background: rgba(255, 255, 255, 0.4);
 		}
 		&__img {
 			height: 17.4rem;
 		}
 		&__bookmark {
-			&:hover {
+			&:hover,
+			&:focus {
+				cursor: pointer;
 				background-color: $white;
+				outline: none;
 				.card__bookmark-icon {
 					filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(100%);
 				}

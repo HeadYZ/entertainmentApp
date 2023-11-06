@@ -20,10 +20,7 @@ const searchController = () => {
 		const availableTitles = model.titlesSearch(searchPhrase)
 		const numberOfTitles = availableTitles.length
 		SearchView.showSearchInfo(numberOfTitles, searchPhrase)
-
-		for (const searchTerm of availableTitles) {
-			SearchView.render(searchTerm)
-		}
+		SearchView.render(availableTitles)
 	}
 
 	SearchView.searchEventHandler(searchPhraseTitles)
@@ -37,3 +34,4 @@ const init = async () => {
 }
 
 init()
+

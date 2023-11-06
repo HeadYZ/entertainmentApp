@@ -1,6 +1,5 @@
 @use './colors' as *;
 @use './mixins/text' as *;
-@use './mixins/_btn.scss' as *;
 @use './mixins/_section.scss' as *;
 
 @media (min-width: 90em) {
@@ -72,8 +71,11 @@
 				&__card {
 					cursor: grab;
 					&-bookmark {
-						&:hover {
+						&:hover,
+						&:focus {
+							cursor: pointer;
 							background-color: $white;
+							outline: none;
 							.trending__card-bookmark-icon {
 								filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(100%);
 							}
@@ -81,12 +83,24 @@
 					}
 					&:hover,
 					&:focus {
-						@include card-play-btn-hover;
+						.card__container-btn {
+							opacity: 1;
+							cursor: pointer;
+						}
+						.card__btn-text {
+							cursor: pointer;
+						}
 						.card__shadow {
 							background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 100%) 140%), rgba(0, 0, 0, 50%);
 							opacity: 1;
 						}
 					}
+				}
+				& .card__container-btn {
+					transition: background 0.3s;
+				}
+				& .card__container-btn:hover {
+					background: rgba(255, 255, 255, 0.4);
 				}
 				&__card:focus {
 					outline: none;
@@ -95,7 +109,7 @@
 					margin-right: 3.6rem;
 				}
 			}
-			//////////////////////////// SECTION RECOMMENDED
+			//////////////////////////// SEARCH SECTION
 			/// //////////////////////////////////
 
 			.search {

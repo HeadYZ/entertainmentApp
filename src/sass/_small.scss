@@ -2,7 +2,6 @@
 @use './UI/layout' as *;
 @use './mixins/_text.scss' as *;
 @use './card' as *;
-@use './mixins/_btn.scss' as *;
 @use './mixins/_section.scss' as *;
 @use './UI/spinner' as *;
 *,
@@ -94,7 +93,6 @@ body {
 				height: 1.6rem;
 				&-icon {
 					width: 1.6rem;
-				
 				}
 			}
 			&-item.active {
@@ -189,7 +187,6 @@ body {
 				height: 14rem;
 				border-radius: 0.8rem;
 				overflow: hidden;
-				@include card-play-btn;
 				&-img {
 					position: absolute;
 					width: 100%;
@@ -256,9 +253,8 @@ body {
 			}
 		}
 
-		//////////////////////////// SECTION RECOMMENDED
+		//////////////////////////// SEARCH SECTION
 		/// //////////////////////////////////
-
 
 		.search {
 			display: none;
