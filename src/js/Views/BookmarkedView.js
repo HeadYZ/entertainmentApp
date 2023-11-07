@@ -1,26 +1,38 @@
 import View from './View'
 
+import { updateDataFirebase } from '../firebase'
+
 class BookmarkedView extends View {
 	parentEl = document.querySelector('.bookmarked')
 
 	bookmarkedHandler() {
 		const allCards = this.parentEl.querySelector('.bookmarked__movies-box')
-		allCards.addEventListener('click', function (e) {
-			if (e.target.classList.contains('card__bookmark')) {
-				console.log(e.target.closest('.card').id)
-			}
+		allCards.addEventListener('click', e => {
+			if (e.target.classList.contains('card__bookmark') || e.target.classList.contains('card__bookmark-icon')) {
+				const card = e.target.closest('.card')
+				const bookmarkIcon = card.querySelector('.card__bookmark-icon')
+				const fullIcon = './icon-bookmark-full.svg'
+				const emptyIcon = './icon-bookmark-empty.svg'
 
-			// if (e.target.classList.contains('card__bookmark')) {
-			// 	e.target.querySelector('img').src.includes('icon-bookmark-empty.svg')
-			// 		? (e.target.querySelector('img').src = './icon-bookmark-full.svg')
-			// 		: (e.target.querySelector('img').src = './icon-bookmark-empty.svg')
-			// }
-			// if (e.target.classList.contains('card__bookmark-icon')) {
-			// 	e.target.src.includes('icon-bookmark-empty.svg')
-			// 		? (e.target.src = './icon-bookmark-full.svg')
-			// 		: (e.target.src = './icon-bookmark-empty.svg')
-			// }
+				bookmarkIcon.src.includes('icon-bookmark-empty.svg')
+					? (bookmarkIcon.src = fullIcon)
+					: (bookmarkIcon.src = emptyIcon)
+
+				this.sendData(card.id)
+			}
 		})
+	}
+	sendData(target) {
+		const titleID = target
+		const titleSought = this.data.find(title => title.id === Number(titleID))
+
+		fetch(`https://entertainment-app-2f41c-default-rtdb.firebaseio.com/DUMMY_DATA/${titleID}.json`)
+			.then(res => res.json())
+			.then(data => {
+				const isBookmarked = data.isBookmarked === true ? false : true
+				const updateBookmarkedData = { ...titleSought, isBookmarked: isBookmarked }
+				updateDataFirebase(updateBookmarkedData, updateBookmarkedData.id)
+			})
 	}
 
 	generateMoviesMarkup() {

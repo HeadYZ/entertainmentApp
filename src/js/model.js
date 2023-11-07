@@ -1,21 +1,4 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-	apiKey: 'AIzaSyDAGuDG-oAmPfEcRguMVNJ0OMBTWVNRiUA',
-	authDomain: 'entertainment-app-2f41c.firebaseapp.com',
-	databaseURL: 'https://entertainment-app-2f41c-default-rtdb.firebaseio.com',
-	projectId: 'entertainment-app-2f41c',
-	storageBucket: 'entertainment-app-2f41c.appspot.com',
-	messagingSenderId: '665468353790',
-	appId: '1:665468353790:web:3df143d7b6ed23ded679af',
-}
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig)
+import {db} from './firebase'
 
 export const entertainmentState = {
 	data: [],
@@ -58,4 +41,26 @@ export const bookmarkedTitles = () => entertainmentState.bookmarked
 
 export const toggleBookmarkedTitle = target => {
 	console.log(target)
+}
+
+export const updateDataFirebase = () => {
+	update(ref(db, 'DUMMY_DATA/0'), {
+		title: 'Beyond Earth',
+		thumbnail: {
+			trending: {
+				small: './thumbnails/beyond-earth/trending/small.jpg',
+				large: './thumbnails/beyond-earth/trending/large.jpg',
+			},
+			regular: {
+				small: './thumbnails/beyond-earth/regular/small.jpg',
+				medium: './thumbnails/beyond-earth/regular/medium.jpg',
+				large: './thumbnails/beyond-earth/regular/large.jpg',
+			},
+		},
+		year: 2019,
+		category: 'Movie',
+		rating: 'PG',
+		isBookmarked: false,
+		isTrending: false,
+	})
 }
