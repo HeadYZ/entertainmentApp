@@ -6,6 +6,10 @@ class SearchView extends View {
 	appBox = document.querySelector('.app__sections-box')
 	searchInformation = document.querySelector('.search__heading')
 
+	addHandlerRender(handler){
+		handler()
+	}
+
 	searchEventHandler(handler) {
 		const input = document.querySelector('.app__search-input')
 		input.addEventListener(

@@ -7,10 +7,18 @@ class TrendingsView extends View {
 	prevPageX
 	prevContainerScrollLeft
 
+	addHandlerRender(handler) {
+		handler()
+	}
+
+	bookmarkHandler(handler) {
+		this.bookmarkedHandler(handler, this.parentEl)
+	}
+
 	generateMarkup() {
 		return this.data
 			.map(
-				data => ` <article class="trending__card" tabindex=0 id='${data.id}'>
+				data => ` <article class="trending__card card" tabindex=0 id='${data.id}'>
     <img src="${window.innerWidth < 768 ? data.thumbnail.trending.small : data.thumbnail.trending.large}" alt="${
 					data.title
 				}"

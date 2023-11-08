@@ -37,6 +37,27 @@ class View {
 	clearSpinner() {
 		this.parentEl.innerHTML = ''
 	}
+	bookmarkedHandler(handler,cardsBox) {
+		// get a box containing cards
+		const allCards = cardsBox
+
+		// add event delegation responsible  for bookmark changes
+		allCards.addEventListener('click', e => {
+			if (e.target.classList.contains('card__bookmark') || e.target.classList.contains('card__bookmark-icon')) {
+				const card = e.target.closest('.card')
+				const bookmarkIcon = card.querySelector('.card__bookmark-icon')
+				const fullIcon = './icon-bookmark-full.svg'
+				const emptyIcon = './icon-bookmark-empty.svg'
+
+				bookmarkIcon.src.includes('icon-bookmark-empty.svg')
+					? (bookmarkIcon.src = fullIcon)
+					: (bookmarkIcon.src = emptyIcon)
+
+					// update bookmarked information on firebase
+				handler(card.id, this.data)
+			}
+		})
+	}
 
 	generateCardMarkup() {
 		return this.data

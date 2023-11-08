@@ -14,7 +14,17 @@ const app = initializeApp(firebaseConfig)
 
 import { getDatabase, ref, update } from 'firebase/database'
 
-export const db = getDatabase()
+const db = getDatabase()
+
+export const getJSON = async url => {
+	try {
+		const respone = await fetch(url)
+		const data = await respone.json()
+		return data
+	} catch (err) {
+		console.error(err)
+	}
+}
 
 export const updateDataFirebase = (data, id) => {
 	update(ref(db, `DUMMY_DATA/${id}`), data)
