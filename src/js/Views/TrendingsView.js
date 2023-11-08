@@ -35,10 +35,10 @@ class TrendingsView extends View {
       </div>
       <h3 class="trending__card-title">${data.title}</h3>
     </div>
-    <div class="trending__card-bookmark" tabindex=0><img src=${
+    <div class="card__bookmark" tabindex=0><img src=${
 			data.isBookmarked ? './icon-bookmark-full.svg' : './icon-bookmark-empty.svg'
 		} alt="empty bookmark icon"
-        class="trending__card-bookmark-icon" ></div>
+        class="card__bookmark-icon" ></div>
       <div class="card__container-btn">  <div class="card__btn"><img src='./icon-play.svg' alt='play icon' class="card__btn-icon"/><span class='card__btn-text'>Play</span></div></div>
       <div class="card__shadow"></div>
   </article>`
