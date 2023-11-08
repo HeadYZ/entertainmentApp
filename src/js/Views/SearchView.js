@@ -28,7 +28,7 @@ class SearchView extends View {
 		this.searchSection.style.display = ' flex'
 	}
 	hideSearchPhrase() {
-		this.appBox.style.display = 'block'
+		this.appBox.style.display = 'flex'
 		this.searchSection.style.display = ' none'
 	}
 

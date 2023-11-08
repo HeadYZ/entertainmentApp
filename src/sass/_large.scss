@@ -52,7 +52,11 @@
 			margin: 0;
 			gap: 0;
 			grid-template-rows: auto auto 1fr;
-
+			&__sections {
+				&-box {
+					gap: 0;
+				}
+			}
 			////////////////// APP INPUT
 
 			&__search {

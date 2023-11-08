@@ -112,7 +112,8 @@ body {
 			&-input {
 				font-family: 'Outfit', sans-serif;
 				flex: 1;
-				@include heading-m;
+				font-size: 1.6rem;
+				font-weight: 300;
 				background: transparent;
 				border: none;
 				color: $white;
@@ -121,6 +122,7 @@ body {
 			&-input::placeholder {
 				font-size: 1.6rem;
 				color: $white;
+				font-weight: 300;
 				opacity: 49.79%;
 			}
 			&-input:focus {
@@ -141,6 +143,9 @@ body {
 		}
 
 		&__sections-box {
+			display: flex;
+			flex-direction: column;
+			gap: 2.4rem;
 			overflow: hidden;
 		}
 

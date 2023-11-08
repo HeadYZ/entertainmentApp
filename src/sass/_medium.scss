@@ -27,6 +27,7 @@
 					height: 2rem;
 					&-icon {
 						width: 2rem;
+						height: 2rem;
 					}
 				}
 			}
@@ -45,9 +46,16 @@
 			gap: 3.3rem;
 
 			////////////////// APP INPUT
-
+			&__sections {
+				&-box {
+					gap: 3.9rem;
+				}
+			}
 			&__search {
 				gap: 2.4rem;
+				&-input {
+					@include heading-m;
+				}
 				&-img {
 					width: 3.2rem;
 				}
