@@ -10,6 +10,7 @@ class SearchView extends View {
 		handler()
 	}
 
+
 	searchEventHandler(handler) {
 		const input = document.querySelector('.app__search-input')
 		input.addEventListener(
@@ -22,16 +23,21 @@ class SearchView extends View {
 		)
 	}
 
+	// function responsible for display searched titles and hide other section
+
 	showSearchPhrase() {
 		this.parentEl.innerHTML = ''
 		this.appBox.style.display = 'none'
 		this.searchSection.style.display = ' flex'
 	}
+
+	// function responsible for hide searched phrase and display other sections
 	hideSearchPhrase() {
 		this.appBox.style.display = 'flex'
 		this.searchSection.style.display = ' none'
 	}
 
+	// function responsible for display information about search titles
 	showSearchInfo(numOfTitles, searchPhrase) {
 		numOfTitles <= 0
 			? (this.searchInformation.innerHTML = `The title you were looking for was not found.`)

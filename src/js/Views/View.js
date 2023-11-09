@@ -1,13 +1,16 @@
 class View {
+	// function responsible for render , isCard is the parameter on which it depends whether it will use the this.generateCardMarkup or this.generateMarkup
 	render(data, isCard) {
 		this.data = data
 		const markup = isCard ? this.generateCardMarkup() : this.generateMarkup()
 		this.parentEl.insertAdjacentHTML('beforeend', markup)
 	}
 
+
 	draggableSlider() {
 		this.draggableLive()
 	}
+	
 	startDrag(e) {
 		this.isDragStart = true
 		this.prevPageX = e.pageX
