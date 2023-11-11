@@ -13,3 +13,6 @@ On the site, I needed to add the ability to add titles to personal bookmarks and
 
 ## Architecture
 - MVC
+
+## Live site
+https://entertainmet-app-yolo.netlify.app/
