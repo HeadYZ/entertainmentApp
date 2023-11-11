@@ -11,3 +11,5 @@ On the site, I needed to add the ability to add titles to personal bookmarks and
 - Vanilla JS <br> 
 - API
 
+## Architecture
+- MVC
