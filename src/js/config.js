@@ -1,1 +1,1 @@
-export const API_URL = 'https://entertainment-app-2f41c-default-rtdb.firebaseio.com/'
+export const API_URL = 'https://entertainment-app-c9ffa-default-rtdb.firebaseio.com/'
