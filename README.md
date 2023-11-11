@@ -6,8 +6,8 @@ For the task was to write an application that, displays movies and series from t
 On the site, I needed to add the ability to add titles to personal bookmarks and the ability to search for a title by a search phrase. 
 
 ## Technologies
-⋅* HTML <br> 
-⋅* SCSS (BEM) <br> 
-⋅* Vanilla JS <br> 
-⋅* API
+- HTML <br> 
+- SCSS (BEM) <br> 
+- Vanilla JS <br> 
+- API
 
